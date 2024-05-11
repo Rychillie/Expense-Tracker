@@ -14,6 +14,9 @@
 		89A2FC892BEFFD8100A4434D /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC882BEFFD8100A4434D /* IntroScreen.swift */; };
 		89A2FC8C2BF001C000A4434D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC8B2BF001C000A4434D /* Constants.swift */; };
 		89A2FC8E2BF010B600A4434D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC8D2BF010B600A4434D /* Tab.swift */; };
+		89A2FC902BF0284000A4434D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC8F2BF0284000A4434D /* Category.swift */; };
+		89A2FC922BF0287400A4434D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC912BF0287400A4434D /* Transaction.swift */; };
+		89A2FC942BF0290800A4434D /* TintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC932BF0290800A4434D /* TintColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		89A2FC882BEFFD8100A4434D /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		89A2FC8B2BF001C000A4434D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		89A2FC8D2BF010B600A4434D /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		89A2FC8F2BF0284000A4434D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		89A2FC912BF0287400A4434D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		89A2FC932BF0290800A4434D /* TintColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		89A2FC862BEFFD5A00A4434D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89A2FC952BF02A5D00A4434D /* TabViews */,
 				89A2FC882BEFFD8100A4434D /* IntroScreen.swift */,
 			);
 			path = View;
@@ -88,6 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				89A2FC8D2BF010B600A4434D /* Tab.swift */,
+				89A2FC8F2BF0284000A4434D /* Category.swift */,
+				89A2FC912BF0287400A4434D /* Transaction.swift */,
+				89A2FC932BF0290800A4434D /* TintColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +108,13 @@
 				89A2FC8B2BF001C000A4434D /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		89A2FC952BF02A5D00A4434D /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A2FC942BF0290800A4434D /* TintColor.swift in Sources */,
+				89A2FC922BF0287400A4434D /* Transaction.swift in Sources */,
 				893EBC332BEFFC1B00B0053A /* ContentView.swift in Sources */,
 				89A2FC892BEFFD8100A4434D /* IntroScreen.swift in Sources */,
 				89A2FC8E2BF010B600A4434D /* Tab.swift in Sources */,
 				893EBC312BEFFC1B00B0053A /* Expense_TrackerApp.swift in Sources */,
 				89A2FC8C2BF001C000A4434D /* Constants.swift in Sources */,
+				89A2FC902BF0284000A4434D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
