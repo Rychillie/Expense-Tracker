@@ -24,6 +24,8 @@
 		89A2FC9F2BF0516300A4434D /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC9E2BF0516300A4434D /* View+Extensions.swift */; };
 		89A2FCA12BF0582900A4434D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA02BF0582900A4434D /* Date+Extensions.swift */; };
 		89A2FCA42BF0687300A4434D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA32BF0687300A4434D /* CardView.swift */; };
+		89A2FCA62BF0712400A4434D /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA52BF0712400A4434D /* TransactionCardView.swift */; };
+		89A2FCA82BF167CC00A4434D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA72BF167CC00A4434D /* SwipeAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		89A2FC9E2BF0516300A4434D /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		89A2FCA02BF0582900A4434D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		89A2FCA32BF0687300A4434D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		89A2FCA52BF0712400A4434D /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		89A2FCA72BF167CC00A4434D /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				89A2FCA32BF0687300A4434D /* CardView.swift */,
+				89A2FCA52BF0712400A4434D /* TransactionCardView.swift */,
+				89A2FCA72BF167CC00A4434D /* SwipeAction.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 				89A2FC922BF0287400A4434D /* Transaction.swift in Sources */,
 				893EBC332BEFFC1B00B0053A /* ContentView.swift in Sources */,
 				89A2FCA42BF0687300A4434D /* CardView.swift in Sources */,
+				89A2FCA82BF167CC00A4434D /* SwipeAction.swift in Sources */,
 				89A2FC892BEFFD8100A4434D /* IntroScreen.swift in Sources */,
 				89A2FC8E2BF010B600A4434D /* Tab.swift in Sources */,
 				89A2FC9D2BF02B3900A4434D /* Settings.swift in Sources */,
@@ -231,6 +238,7 @@
 				89A2FC8C2BF001C000A4434D /* Constants.swift in Sources */,
 				89A2FC9B2BF02B2B00A4434D /* Graphs.swift in Sources */,
 				89A2FC902BF0284000A4434D /* Category.swift in Sources */,
+				89A2FCA62BF0712400A4434D /* TransactionCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
