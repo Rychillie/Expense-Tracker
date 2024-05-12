@@ -30,6 +30,7 @@ struct ContentView: View {
                 .tag(Tab.settings)
                 .tabItem { Tab.settings.tabContent }
         }
+        .tint(appTint)
         .sheet(isPresented: $isFirstTime, content: {
             IntroScreen()
                 .interactiveDismissDisabled()
