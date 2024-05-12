@@ -23,6 +23,7 @@
 		89A2FC9D2BF02B3900A4434D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC9C2BF02B3900A4434D /* Settings.swift */; };
 		89A2FC9F2BF0516300A4434D /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FC9E2BF0516300A4434D /* View+Extensions.swift */; };
 		89A2FCA12BF0582900A4434D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA02BF0582900A4434D /* Date+Extensions.swift */; };
+		89A2FCA42BF0687300A4434D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA32BF0687300A4434D /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		89A2FC9C2BF02B3900A4434D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		89A2FC9E2BF0516300A4434D /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		89A2FCA02BF0582900A4434D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		89A2FCA32BF0687300A4434D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		89A2FC862BEFFD5A00A4434D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89A2FCA22BF0686700A4434D /* Helpers */,
 				89A2FC952BF02A5D00A4434D /* TabViews */,
 				89A2FC882BEFFD8100A4434D /* IntroScreen.swift */,
 			);
@@ -133,6 +136,14 @@
 				89A2FC9C2BF02B3900A4434D /* Settings.swift */,
 			);
 			path = TabViews;
+			sourceTree = "<group>";
+		};
+		89A2FCA22BF0686700A4434D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				89A2FCA32BF0687300A4434D /* CardView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				89A2FC972BF02B0700A4434D /* Recents.swift in Sources */,
 				89A2FC922BF0287400A4434D /* Transaction.swift in Sources */,
 				893EBC332BEFFC1B00B0053A /* ContentView.swift in Sources */,
+				89A2FCA42BF0687300A4434D /* CardView.swift in Sources */,
 				89A2FC892BEFFD8100A4434D /* IntroScreen.swift in Sources */,
 				89A2FC8E2BF010B600A4434D /* Tab.swift in Sources */,
 				89A2FC9D2BF02B3900A4434D /* Settings.swift in Sources */,
