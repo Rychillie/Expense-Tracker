@@ -13,6 +13,9 @@ struct Recents: View {
     /// View Properties
     @State private var startDate: Date = .now.startOfMonth
     @State private var endDate: Date = .now.endtOfMonth
+    @State private var selectedCategory: Category = .expense
+    /// For Animation
+    @Namespace private var animation
     var body: some View {
         GeometryReader {
             /// For Animation Purpose
@@ -32,6 +35,9 @@ struct Recents: View {
                             
                             /// Card View
                             CardView(income: 2039, expense: 4098)
+                            
+                            /// Custom Segmented Control
+                            CustomSegmentedControl()
                         } header: {
                             HeaderView(size)
                         }
@@ -91,6 +97,33 @@ struct Recents: View {
             .padding(.horizontal, -15)
             .padding(.top, -(safeArea.top + 15))
         }
+    }
+    
+    /// Segmented Control
+    @ViewBuilder
+    func CustomSegmentedControl() -> some View {
+        HStack(spacing: 0) {
+            ForEach(Category.allCases, id: \.rawValue) { category in
+                Text(category.rawValue)
+                    .hSpacing()
+                    .padding(.vertical, 10)
+                    .background {
+                        if category == selectedCategory {
+                            Capsule()
+                                .fill(.background)
+                                .matchedGeometryEffect(id: "ACTIVETAB", in: animation)
+                        }
+                    }
+                    .contentShape(.capsule)
+                    .onTapGesture {
+                        withAnimation(.snappy) {
+                            selectedCategory = category
+                        }
+                    }
+            }
+        }
+        .background(.gray.opacity(0.15), in: .capsule)
+        .padding(.top, 5)
     }
     
     func headerBGOpacity(_ proxy: GeometryProxy)-> CGFloat {
