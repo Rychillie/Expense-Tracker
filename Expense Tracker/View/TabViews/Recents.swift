@@ -13,6 +13,7 @@ struct Recents: View {
     /// View Properties
     @State private var startDate: Date = .now.startOfMonth
     @State private var endDate: Date = .now.endtOfMonth
+    @State private var showFilterView: Bool = false
     @State private var selectedCategory: Category = .expense
     /// For Animation
     @Namespace private var animation
@@ -26,7 +27,9 @@ struct Recents: View {
                     LazyVStack(spacing: 10, pinnedViews: [.sectionHeaders]) {
                         Section {
                             /// Date Filter Button
-                            Button(action: {}, label: {
+                            Button(action: {
+                                showFilterView = true
+                            }, label: {
                                 Text("\(format(date: startDate, format: "dd - MMM yy")) to \(format(date: endDate, format: "dd - MMM yy"))")
                                     .font(.caption2)
                                     .foregroundStyle(.gray)
@@ -50,7 +53,22 @@ struct Recents: View {
                     .padding(15)
                 }
                 .background(.gray.opacity(0.15))
+                .blur(radius: showFilterView ? 8 : 0)
+                .disabled(showFilterView)
             }
+            .overlay {
+                if showFilterView {
+                    DateFilterView(start: startDate, end: endDate, onSubmit: { start, end in
+                        startDate = start
+                        endDate = end
+                        showFilterView = false
+                    }, onClose: {
+                        showFilterView = false
+                    })
+                        .transition(.move(edge: .leading))
+                }
+            }
+            .animation(.snappy, value: showFilterView)
         }
     }
     

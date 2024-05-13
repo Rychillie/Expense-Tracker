@@ -26,6 +26,7 @@
 		89A2FCA42BF0687300A4434D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA32BF0687300A4434D /* CardView.swift */; };
 		89A2FCA62BF0712400A4434D /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA52BF0712400A4434D /* TransactionCardView.swift */; };
 		89A2FCA82BF167CC00A4434D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA72BF167CC00A4434D /* SwipeAction.swift */; };
+		89F32D3D2BF2AC32007400FB /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F32D3C2BF2AC32007400FB /* DateFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		89A2FCA32BF0687300A4434D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		89A2FCA52BF0712400A4434D /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		89A2FCA72BF167CC00A4434D /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		89F32D3C2BF2AC32007400FB /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				89A2FCA32BF0687300A4434D /* CardView.swift */,
 				89A2FCA52BF0712400A4434D /* TransactionCardView.swift */,
 				89A2FCA72BF167CC00A4434D /* SwipeAction.swift */,
+				89F32D3C2BF2AC32007400FB /* DateFilterView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				89A2FC942BF0290800A4434D /* TintColor.swift in Sources */,
 				89A2FC972BF02B0700A4434D /* Recents.swift in Sources */,
+				89F32D3D2BF2AC32007400FB /* DateFilterView.swift in Sources */,
 				89A2FC922BF0287400A4434D /* Transaction.swift in Sources */,
 				893EBC332BEFFC1B00B0053A /* ContentView.swift in Sources */,
 				89A2FCA42BF0687300A4434D /* CardView.swift in Sources */,
