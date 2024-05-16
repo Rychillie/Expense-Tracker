@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8934FA552BF6784A0022D2F3 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8934FA542BF6784A0022D2F3 /* LockView.swift */; };
 		893EBC312BEFFC1B00B0053A /* Expense_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EBC302BEFFC1B00B0053A /* Expense_TrackerApp.swift */; };
 		893EBC332BEFFC1B00B0053A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EBC322BEFFC1B00B0053A /* ContentView.swift */; };
 		893EBC352BEFFC1C00B0053A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893EBC342BEFFC1C00B0053A /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8934FA542BF6784A0022D2F3 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 		893EBC2D2BEFFC1B00B0053A /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		893EBC302BEFFC1B00B0053A /* Expense_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense_TrackerApp.swift; sourceTree = "<group>"; };
 		893EBC322BEFFC1B00B0053A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				89A2FCA52BF0712400A4434D /* TransactionCardView.swift */,
 				89A2FCA72BF167CC00A4434D /* SwipeAction.swift */,
 				89F32D3C2BF2AC32007400FB /* DateFilterView.swift */,
+				8934FA542BF6784A0022D2F3 /* LockView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				89A2FC992BF02B1D00A4434D /* Search.swift in Sources */,
 				89A2FCA12BF0582900A4434D /* Date+Extensions.swift in Sources */,
 				89A2FC9F2BF0516300A4434D /* View+Extensions.swift in Sources */,
+				8934FA552BF6784A0022D2F3 /* LockView.swift in Sources */,
 				89A2FC8C2BF001C000A4434D /* Constants.swift in Sources */,
 				89A2FC9B2BF02B2B00A4434D /* Graphs.swift in Sources */,
 				89A2FC902BF0284000A4434D /* Category.swift in Sources */,
@@ -379,6 +383,7 @@
 				DEVELOPMENT_TEAM = 8YG678URN3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = DESCRIPTION;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,6 +413,7 @@
 				DEVELOPMENT_TEAM = 8YG678URN3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = DESCRIPTION;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
