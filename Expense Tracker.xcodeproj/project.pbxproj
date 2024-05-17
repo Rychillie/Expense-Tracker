@@ -27,6 +27,7 @@
 		89A2FCA42BF0687300A4434D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA32BF0687300A4434D /* CardView.swift */; };
 		89A2FCA62BF0712400A4434D /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA52BF0712400A4434D /* TransactionCardView.swift */; };
 		89A2FCA82BF167CC00A4434D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2FCA72BF167CC00A4434D /* SwipeAction.swift */; };
+		89CA18512BF7E63D0095C778 /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CA18502BF7E63D0095C778 /* NewExpenseView.swift */; };
 		89F32D3D2BF2AC32007400FB /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F32D3C2BF2AC32007400FB /* DateFilterView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		89A2FCA32BF0687300A4434D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		89A2FCA52BF0712400A4434D /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		89A2FCA72BF167CC00A4434D /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		89CA18502BF7E63D0095C778 /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 		89F32D3C2BF2AC32007400FB /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				89A2FCA22BF0686700A4434D /* Helpers */,
 				89A2FC952BF02A5D00A4434D /* TabViews */,
 				89A2FC882BEFFD8100A4434D /* IntroScreen.swift */,
+				89CA18502BF7E63D0095C778 /* NewExpenseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				89A2FCA42BF0687300A4434D /* CardView.swift in Sources */,
 				89A2FCA82BF167CC00A4434D /* SwipeAction.swift in Sources */,
 				89A2FC892BEFFD8100A4434D /* IntroScreen.swift in Sources */,
+				89CA18512BF7E63D0095C778 /* NewExpenseView.swift in Sources */,
 				89A2FC8E2BF010B600A4434D /* Tab.swift in Sources */,
 				89A2FC9D2BF02B3900A4434D /* Settings.swift in Sources */,
 				893EBC312BEFFC1B00B0053A /* Expense_TrackerApp.swift in Sources */,
