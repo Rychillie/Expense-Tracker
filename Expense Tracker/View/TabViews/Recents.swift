@@ -89,7 +89,7 @@ struct Recents: View {
     func HeaderView(_ size: CGSize) -> some View {
         HStack(spacing: 10) {
             VStack(alignment: .leading, spacing: 5, content: {
-                Text("Welcome!")
+                Text(LocalizedStringKey("Welcome"))
                     .font(.title.bold())
                 
                 if !userName.isEmpty {
@@ -139,7 +139,7 @@ struct Recents: View {
     func CustomSegmentedControl() -> some View {
         HStack(spacing: 0) {
             ForEach(Category.allCases, id: \.rawValue) { category in
-                Text(category.rawValue)
+                Text(category.rawValue == "Income" ? LocalizedStringKey("Income") : LocalizedStringKey("Expense"))
                     .hSpacing()
                     .padding(.vertical, 10)
                     .background {
@@ -179,4 +179,5 @@ struct Recents: View {
 
 #Preview {
     ContentView()
+        .environment(\.locale, .init(identifier: "pt-BR"))
 }

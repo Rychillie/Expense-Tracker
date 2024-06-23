@@ -32,7 +32,7 @@ struct Search: View {
                 .padding(15)
             }
             .overlay(content: {
-                ContentUnavailableView("Search Transactions", systemImage: "magnifyingglass")
+                ContentUnavailableView(LocalizedStringKey("Search Transactions"), systemImage: "magnifyingglass")
                     .opacity(searchText.isEmpty ? 1: 0)
             })
             .onChange(of: searchText, { oldValue, newValue in
@@ -46,7 +46,7 @@ struct Search: View {
                 print(text)
             })
             .searchable(text: $searchText)
-            .navigationTitle("Search")
+            .navigationTitle(LocalizedStringKey("Search"))
             .background(.gray.opacity(0.15))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -63,7 +63,7 @@ struct Search: View {
                 selectedCategory = nil
             } label: {
                 HStack {
-                    Text("Both")
+                    Text(LocalizedStringKey("Both"))
                     
                     if selectedCategory == nil {
                         Image(systemName: "checkmark")
@@ -76,7 +76,7 @@ struct Search: View {
                     selectedCategory = category
                 } label: {
                     HStack {
-                        Text(category.rawValue)
+                        Text(category.rawValue == "Income" ? LocalizedStringKey("Income") : LocalizedStringKey("Expense"))
                         
                         if selectedCategory == category {
                             Image(systemName: "checkmark")
@@ -92,4 +92,5 @@ struct Search: View {
 
 #Preview {
     Search()
+        .environment(\.locale, .init(identifier: "pt-BR"))
 }

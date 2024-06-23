@@ -61,7 +61,7 @@ struct StatsCardView: Widget {
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview(as: .systemMedium) {
     StatsCardView()
 } timeline: {
     WidgetEntry(date: .now)

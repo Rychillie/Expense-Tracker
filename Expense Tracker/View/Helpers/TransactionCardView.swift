@@ -34,7 +34,7 @@ struct TransactionCardView: View {
                         .foregroundStyle(.gray)
                     
                     if showsCategory {
-                        Text(transaction.category)
+                        Text(transaction.category == "Income" ? LocalizedStringKey("Income") : LocalizedStringKey("Expense"))
                             .font(.caption2)
                             .padding(.horizontal, 5)
                             .padding(.vertical, 2)

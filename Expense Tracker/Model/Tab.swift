@@ -18,16 +18,16 @@ enum Tab: String {
         switch self {
         case .recents:
             Image(systemName: "calendar")
-            Text(self.rawValue)
+            Text(LocalizedStringKey("Recents"))
         case .search:
             Image(systemName: "magnifyingglass")
-            Text(self.rawValue)
+            Text(LocalizedStringKey("ScreenFilter"))
         case .charts:
             Image(systemName: "chart.bar.xaxis")
-            Text(self.rawValue)
+            Text(LocalizedStringKey("Charts"))
         case .settings:
             Image(systemName: "gearshape")
-            Text(self.rawValue)
+            Text(LocalizedStringKey("Settings"))
         }
     }
 }

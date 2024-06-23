@@ -12,6 +12,7 @@
 		893EBC332BEFFC1B00B0053A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893EBC322BEFFC1B00B0053A /* ContentView.swift */; };
 		893EBC352BEFFC1C00B0053A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893EBC342BEFFC1C00B0053A /* Assets.xcassets */; };
 		893EBC382BEFFC1C00B0053A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893EBC372BEFFC1C00B0053A /* Preview Assets.xcassets */; };
+		8963B9882C28B27400153D7C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8963B9862C28B27400153D7C /* Localizable.strings */; };
 		896BAC682BFC0A8A00BB46EA /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BAC672BFC0A8A00BB46EA /* ChartModel.swift */; };
 		896BAC702BFC25D800BB46EA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896BAC6F2BFC25D800BB46EA /* WidgetKit.framework */; };
 		896BAC722BFC25D800BB46EA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896BAC712BFC25D800BB46EA /* SwiftUI.framework */; };
@@ -78,6 +79,8 @@
 		893EBC322BEFFC1B00B0053A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		893EBC342BEFFC1C00B0053A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		893EBC372BEFFC1C00B0053A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8963B9872C28B27400153D7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8963B9892C28B2A300153D7C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		896BAC672BFC0A8A00BB46EA /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		896BAC6D2BFC25D800BB46EA /* StatsCardViewExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StatsCardViewExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		896BAC6F2BFC25D800BB46EA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -131,6 +134,7 @@
 		893EBC242BEFFC1B00B0053A = {
 			isa = PBXGroup;
 			children = (
+				8963B9852C28B24A00153D7C /* Resources */,
 				896BAC8B2BFC28C500BB46EA /* StatsCardViewExtension.entitlements */,
 				893EBC2F2BEFFC1B00B0053A /* Expense Tracker */,
 				896BAC732BFC25D800BB46EA /* StatsCardView */,
@@ -169,6 +173,14 @@
 				893EBC372BEFFC1C00B0053A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8963B9852C28B24A00153D7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8963B9862C28B27400153D7C /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		896BAC6E2BFC25D800BB46EA /* Frameworks */ = {
@@ -312,6 +324,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 893EBC242BEFFC1B00B0053A;
 			productRefGroup = 893EBC2E2BEFFC1B00B0053A /* Products */;
@@ -330,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				893EBC382BEFFC1C00B0053A /* Preview Assets.xcassets in Resources */,
+				8963B9882C28B27400153D7C /* Localizable.strings in Resources */,
 				893EBC352BEFFC1C00B0053A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +414,18 @@
 			targetProxy = 896BAC7B2BFC25D900BB46EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8963B9862C28B27400153D7C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8963B9872C28B27400153D7C /* en */,
+				8963B9892C28B2A300153D7C /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		893EBC392BEFFC1C00B0053A /* Debug */ = {
@@ -529,7 +555,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Expense Tracker/Expense Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Expense Tracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 8YG678URN3;
 				ENABLE_PREVIEWS = YES;
@@ -563,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Expense Tracker/Expense Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Expense Tracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 8YG678URN3;
 				ENABLE_PREVIEWS = YES;

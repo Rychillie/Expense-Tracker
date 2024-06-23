@@ -16,7 +16,7 @@ struct ContentView: View {
     /// Active Tab
     @State private var activeTab: Tab = .recents
     var body: some View {
-        LockView(lockType: .biometric, lockPin: "", isEnabled: isAppLockEnabled, lockWhenAppGoesBackground: lockWhenAppGoesBackground) {
+//        LockView(lockType: .biometric, lockPin: "", isEnabled: isAppLockEnabled, lockWhenAppGoesBackground: lockWhenAppGoesBackground) {
             TabView(selection: $activeTab) {
                 Recents()
                     .tag(Tab.recents)
@@ -39,10 +39,11 @@ struct ContentView: View {
                 IntroScreen()
                     .interactiveDismissDisabled()
             })
-        }
+//        }
     }
 }
 
 #Preview {
     ContentView()
+        .environment(\.locale, .init(identifier: "pt-BR"))
 }

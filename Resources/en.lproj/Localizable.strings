@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  Expense Tracker
+
+  Created by Rychillie Umpierre de Oliveira on 23/06/24.
+  
+*/
+
+"Welcome" = "Welcome!";
+"Income" = "Income";
+"Expense" = "Expense";
+"Recents" = "Recents";
+"ScreenFilter" = "Filtrar";
+"Charts" = "Charts";
+"Settings" = "Settings";
+"Title" = "Title";
+"Remarks" = "Remarks";
+"Amount & Category" = "Amount & Category";
+"Date" = "Date";
+"Add" = "Add";
+"Edit" = "Edit";
+"Transaction" = "Transaction";
+"Save" = "Save";
+"Apple Product" = "Apple Product!";
+"Search" = "Search";
+"Search Transactions" = "Search Transactions";
+"Both" = "Both";
+"Graphs" = "Graphs";
+"User Name" = "User Name";
+"Start Date" = "Start Date";
+"End Date" = "End Date";
+"Cancel" = "Cancel";
+"Filter" = "Filter";

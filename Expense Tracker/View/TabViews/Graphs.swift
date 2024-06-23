@@ -41,7 +41,7 @@ struct Graphs: View {
                 }
                 .padding(15)
             }
-            .navigationTitle("Graphs")
+            .navigationTitle(LocalizedStringKey("Graphs"))
             .background(.gray.opacity(0.15))
             .onAppear {
                 /// Creating Chart Group
@@ -62,7 +62,7 @@ struct Graphs: View {
                         width: 20
                     )
                     .position(by: .value("Category", chart.category.rawValue), axis: .horizontal)
-                    .foregroundStyle(by: .value("Category", chart.category.rawValue))
+                    .foregroundStyle(by: .value("Category", chart.category.rawValue == "Income" ? String(localized: "Income") : String(localized: "Expense")))
                 }
             }
         }
@@ -155,7 +155,7 @@ struct ListOfExpenses: View {
                         }
                     }
                 } header: {
-                    Text("Income")
+                    Text(LocalizedStringKey("Income"))
                         .font(.caption)
                         .foregroundStyle(.gray)
                         .hSpacing(.leading)
@@ -173,7 +173,7 @@ struct ListOfExpenses: View {
                         }
                     }
                 } header: {
-                    Text("Expense")
+                    Text(LocalizedStringKey("Expense"))
                         .font(.caption)
                         .foregroundStyle(.gray)
                         .hSpacing(.leading)
@@ -188,4 +188,5 @@ struct ListOfExpenses: View {
 
 #Preview {
     Graphs()
+        .environment(\.locale, .init(identifier: "pt-BR"))
 }

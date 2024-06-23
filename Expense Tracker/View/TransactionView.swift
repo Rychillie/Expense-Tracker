@@ -21,6 +21,7 @@ struct TransactionView: View {
     @State private var category: Category = .expense
     /// Random Tint
     @State var tint: TintColor = tints.randomElement()!
+    
     var body: some View {
         ScrollView(.vertical) {
             VStack(spacing: 15) {
@@ -31,21 +32,29 @@ struct TransactionView: View {
                 
                 /// Preview transaction Card View
                 TransactionCardView(transaction: .init(
-                    title: title.isEmpty ? "Title" : title,
-                    remarks: remarks.isEmpty ? "Remarks" : remarks,
+                    title: title.isEmpty ? String(localized: "Title") : title,
+                    remarks: remarks.isEmpty ? String(localized: "Remarks") : remarks,
                     amount: amount,
                     dateAdded: dateAdded,
                     category: category,
                     tintColor: tint
                 ))
                 
-                CustomSection("Title", "Magic Keyboard", value: $title)
+                CustomSection(
+                    String(localized: "Title"),
+                    "Magic Keyboard",
+                    value: $title
+                )
                 
-                CustomSection("Remarks", "Apple Product!", value: $remarks)
+                CustomSection(
+                    String(localized: "Remarks"),
+                    String(localized: "Apple Product"),
+                    value: $remarks
+                )
                 
                 /// Amount & Category Check Box
                 VStack(alignment: .leading, spacing: 10, content: {
-                    Text("Amount & Category")
+                    Text(LocalizedStringKey("Amount & Category"))
                         .font(.caption)
                         .foregroundStyle(.gray)
                         .hSpacing(.leading)
@@ -70,7 +79,7 @@ struct TransactionView: View {
                 
                 /// Date Picker
                 VStack(alignment: .leading, spacing: 10, content: {
-                    Text("Date")
+                    Text(LocalizedStringKey("Date"))
                         .font(.caption)
                         .foregroundStyle(.gray)
                         .hSpacing(.leading)
@@ -84,7 +93,7 @@ struct TransactionView: View {
             }
             .padding(15)
         }
-        .navigationTitle("\(editTransaction == nil ? "Add" : "Edit") Transaction")
+        .navigationTitle("\(editTransaction == nil ? String(localized: "Add") : String(localized: "Edit")) \(String(localized: "Transaction"))")
         .background(.gray.opacity(0.15))
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing) {
@@ -160,7 +169,7 @@ struct TransactionView: View {
                         }
                     }
                     
-                    Text(category.rawValue)
+                    Text(category.rawValue == "Income" ? LocalizedStringKey("Income") : LocalizedStringKey("Expense"))
                         .font(.caption)
                 }
                 .contentShape(.rect)
@@ -188,5 +197,6 @@ struct TransactionView: View {
 #Preview {
     NavigationStack {
         TransactionView()
+            .environment(\.locale, .init(identifier: "pt-BR"))
     }
 }

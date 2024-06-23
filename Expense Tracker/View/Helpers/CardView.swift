@@ -30,7 +30,7 @@ struct CardView: View {
                 HStack(spacing: 0) {
                     ForEach(Category.allCases, id: \.rawValue) { category in
                         let symbolImage = category == .income ? "arrow.down" : "arrow.up"
-                        let tint = category == . income ? Color.green : Color.red
+                        let tint = category == .income ? Color.green : Color.red
                         
                         HStack(spacing: 10) {
                             Image(systemName: symbolImage)
@@ -43,7 +43,7 @@ struct CardView: View {
                                 }
                             
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(category.rawValue)
+                                Text(category.rawValue == "Income" ? LocalizedStringKey("Income") : LocalizedStringKey("Expense"))
                                     .font(.caption2)
                                     .foregroundStyle(.gray)
                                 
@@ -69,5 +69,6 @@ struct CardView: View {
 #Preview {
     ScrollView {
         CardView(income: 4590, expense: 2389)
+            .environment(\.locale, .init(identifier: "pt-BR"))
     }
 }

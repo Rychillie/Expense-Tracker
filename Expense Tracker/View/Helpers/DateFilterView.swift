@@ -14,19 +14,27 @@ struct DateFilterView: View {
     var onClose: () -> ()
     var body: some View {
         VStack(spacing: 15) {
-            DatePicker("Start Date", selection: $start, displayedComponents: [.date])
+            DatePicker(
+                LocalizedStringKey("Start Date"),
+                selection: $start,
+                displayedComponents: [.date]
+            )
             
-            DatePicker("End Date", selection: $end, displayedComponents: [.date])
+            DatePicker(
+                LocalizedStringKey("End Date"),
+                selection: $end,
+                displayedComponents: [.date]
+            )
             
             HStack(spacing: 15) {
-                Button("Cancel") {
+                Button(LocalizedStringKey("Cancel")) {
                     onClose()
                 }
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.roundedRectangle(radius: 5))
                 .tint(.red)
                 
-                Button("Filter") {
+                Button(LocalizedStringKey("Filter")) {
                     onSubmit(start, end)
                 }
                 .buttonStyle(.borderedProminent)

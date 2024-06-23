@@ -16,23 +16,24 @@ struct Settings: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("User Name") {
+                Section(LocalizedStringKey("User Name")) {
                     TextField("Tim Apple", text: $userName)
                 }
                 
-                Section("App Lock") {
-                    Toggle("Enable App Lock", isOn: $isAppLockEnabled)
-                    
-                    if isAppLockEnabled {
-                        Toggle("Lock When App Goes Background", isOn: $lockWhenAppGoesBackground)
-                    }
-                }
+//                Section("App Lock") {
+//                    Toggle("Enable App Lock", isOn: $isAppLockEnabled)
+//                    
+//                    if isAppLockEnabled {
+//                        Toggle("Lock When App Goes Background", isOn: $lockWhenAppGoesBackground)
+//                    }
+//                }
             }
-            .navigationTitle("Settings")
+            .navigationTitle(LocalizedStringKey("Settings"))
         }
     }
 }
 
 #Preview {
     ContentView()
+        .environment(\.locale, .init(identifier: "pt-BR"))
 }
