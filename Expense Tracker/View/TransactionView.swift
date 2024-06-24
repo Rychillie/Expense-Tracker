@@ -22,6 +22,10 @@ struct TransactionView: View {
     /// Random Tint
     @State var tint: TintColor = tints.randomElement()!
     
+    @FocusState private var focusTitle: Bool
+    @FocusState private var focusRemarks: Bool
+    @FocusState private var focusAmount: Bool
+    
     var body: some View {
         ScrollView(.vertical) {
             VStack(spacing: 15) {
@@ -43,14 +47,20 @@ struct TransactionView: View {
                 CustomSection(
                     String(localized: "Title"),
                     "Magic Keyboard",
-                    value: $title
+                    value: $title,
+                    focused: $focusTitle,
+                    onSubmit: {
+                        focusTitle = false
+                    }
                 )
                 
                 CustomSection(
                     String(localized: "Remarks"),
                     String(localized: "Apple Product"),
-                    value: $remarks
-                )
+                    value: $remarks,
+                    focused: $focusRemarks) {
+                        focusRemarks = false
+                    }
                 
                 /// Amount & Category Check Box
                 VStack(alignment: .leading, spacing: 10, content: {
@@ -64,8 +74,10 @@ struct TransactionView: View {
                             Text(currencySymbol)
                                 .font(.callout.bold())
                             
-                            TextField("0.0", value: $amount, formatter: numberFormatter)
+                            TextField("0,00", value: $amount, formatter: numberFormatter)
                                 .keyboardType(.decimalPad)
+                                .onSubmit {focusAmount = false}
+                                .focused($focusAmount)
                         }
                         .padding(.horizontal, 15)
                         .padding(.vertical, 12)
@@ -92,6 +104,11 @@ struct TransactionView: View {
                 })
             }
             .padding(15)
+        }
+        .onTapGesture{
+            focusTitle = false
+            focusRemarks = false
+            focusAmount = false
         }
         .navigationTitle("\(editTransaction == nil ? String(localized: "Add") : String(localized: "Edit")) \(String(localized: "Transaction"))")
         .background(.gray.opacity(0.15))
@@ -137,7 +154,7 @@ struct TransactionView: View {
     }
     
     @ViewBuilder
-    func CustomSection(_ title: String, _ hint: String, value: Binding<String>) -> some View {
+    func CustomSection(_ title: String, _ hint: String, value: Binding<String>, focused: FocusState<Bool>.Binding, onSubmit: @escaping () -> Void) -> some View {
         VStack(alignment: .leading, spacing: 10, content: {
             Text(title)
                 .font(.caption)
@@ -148,6 +165,8 @@ struct TransactionView: View {
                 .padding(.horizontal, 15)
                 .padding(.vertical, 12)
                 .background(.background, in: .rect(cornerRadius: 10))
+                .onSubmit(onSubmit)
+                .focused(focused)
         })
     }
     
@@ -187,6 +206,7 @@ struct TransactionView: View {
     /// Number Formatter
     var numberFormatter: NumberFormatter {
         let formatter = NumberFormatter()
+        formatter.locale = Locale.current
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         
