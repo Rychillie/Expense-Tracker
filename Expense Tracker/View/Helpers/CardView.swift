@@ -10,6 +10,9 @@ import SwiftUI
 struct CardView: View {
     var income: Double
     var expense: Double
+    var textIncome: String?
+    var textExpense: String?
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
@@ -43,7 +46,7 @@ struct CardView: View {
                                 }
                             
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(category.rawValue == "Income" ? LocalizedStringKey("Income") : LocalizedStringKey("Expense"))
+                                Text(LocalizedStringKey(category.rawValue))
                                     .font(.caption2)
                                     .foregroundStyle(.gray)
                                 

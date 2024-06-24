@@ -56,8 +56,8 @@ struct StatsCardView: Widget {
         }
         .supportedFamilies([.systemMedium])
         .contentMarginsDisabled()
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName(NSLocalizedString("My Widget", comment: ""))
+        .description(NSLocalizedString("This is an example widget.", comment: ""))
     }
 }
 

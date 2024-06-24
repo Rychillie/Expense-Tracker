@@ -10,7 +10,7 @@
 "Income" = "Income";
 "Expense" = "Expense";
 "Recents" = "Recents";
-"ScreenFilter" = "Filtrar";
+"ScreenFilter" = "Filter";
 "Charts" = "Charts";
 "Settings" = "Settings";
 "Title" = "Title";
@@ -31,3 +31,5 @@
 "End Date" = "End Date";
 "Cancel" = "Cancel";
 "Filter" = "Filter";
+"My Widget" = "My Widget";
+"This is an example widget." = "This is an example widget.";

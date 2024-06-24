@@ -139,7 +139,7 @@ struct Recents: View {
     func CustomSegmentedControl() -> some View {
         HStack(spacing: 0) {
             ForEach(Category.allCases, id: \.rawValue) { category in
-                Text(category.rawValue == "Income" ? LocalizedStringKey("Income") : LocalizedStringKey("Expense"))
+                Text(category.rawValue == "Income" ? String(localized: "Income") : String(localized: "Expense"))
                     .hSpacing()
                     .padding(.vertical, 10)
                     .background {
