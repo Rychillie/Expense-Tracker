@@ -17,16 +17,6 @@
         }
       }
     },
-    "%@ to %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ to %2$@"
-          }
-        }
-      }
-    },
     "%lld" : {
 
     },

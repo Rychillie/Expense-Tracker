@@ -13,11 +13,15 @@ struct Settings: View {
     /// App Lock Properties
     @AppStorage("isAppLockEnabled") private var isAppLockEnabled: Bool = false
     @AppStorage("lockWhenAppGoesBackground") private var lockWhenAppGoesBackground: Bool = false
+    @FocusState private var focusUserName: Bool
+    
     var body: some View {
         NavigationStack {
             List {
                 Section(LocalizedStringKey("User Name")) {
                     TextField("Tim Apple", text: $userName)
+                        .onSubmit {focusUserName = false}
+                        .focused($focusUserName)
                 }
                 
 //                Section("App Lock") {
@@ -27,6 +31,9 @@ struct Settings: View {
 //                        Toggle("Lock When App Goes Background", isOn: $lockWhenAppGoesBackground)
 //                    }
 //                }
+            }
+            .onTapGesture{
+                focusUserName = false
             }
             .navigationTitle(LocalizedStringKey("Settings"))
         }

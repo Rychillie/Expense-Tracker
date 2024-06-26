@@ -18,6 +18,7 @@ struct Recents: View {
     @State private var selectedCategory: Category = .expense
     /// For Animation
     @Namespace private var animation
+    
     var body: some View {
         GeometryReader {
             /// For Animation Purpose
@@ -31,7 +32,7 @@ struct Recents: View {
                             Button(action: {
                                 showFilterView = true
                             }, label: {
-                                Text("\(format(date: startDate, format: "dd - MMM yy")) to \(format(date: endDate, format: "dd - MMM yy"))")
+                                Text(formatDateRange(startDate: startDate, endDate: endDate))
                                     .font(.caption2)
                                     .foregroundStyle(.gray)
                             })
@@ -174,6 +175,12 @@ struct Recents: View {
         let scale = (min(max(progress, 0), 1)) * 0.4
         
         return 1 + scale
+    }
+    
+    func formatDateRange(startDate: Date, endDate: Date) -> String {
+        let formattedStartDate = format(date: startDate, format: "dd - MMM yy")
+        let formattedEndDate = format(date: endDate, format: "dd - MMM yy")
+        return "\(formattedStartDate) to \(formattedEndDate)"
     }
 }
 
