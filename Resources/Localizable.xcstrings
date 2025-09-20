@@ -2,10 +2,24 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "%@" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ %@" : {
       "localizations" : {
@@ -14,17 +28,44 @@
             "state" : "new",
             "value" : "%1$@ %2$@"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@%2$@"
+          }
         }
       }
     },
     "%lld" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
     },
     "0" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0"
+          }
+        }
+      }
     },
     "0,00" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0,00"
+          }
+        }
+      }
     },
     "Add" : {
       "extractionState" : "manual",
@@ -112,7 +153,20 @@
       }
     },
     "Category" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoria"
+          }
+        }
+      }
     },
     "Charts" : {
       "extractionState" : "manual",
@@ -132,7 +186,20 @@
       }
     },
     "Continue" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
     },
     "Date" : {
       "extractionState" : "manual",
@@ -150,6 +217,9 @@
           }
         }
       }
+    },
+    "Done" : {
+
     },
     "Edit" : {
       "extractionState" : "manual",
@@ -169,7 +239,14 @@
       }
     },
     "Enable biometric authentication in Settings to unlock the view." : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ative a Autenticação por Biometria nas Configurações para desbloquear a tela. "
+          }
+        }
+      }
     },
     "End Date" : {
       "extractionState" : "manual",
@@ -189,7 +266,14 @@
       }
     },
     "Enter Pin" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Digite a Senha"
+          }
+        }
+      }
     },
     "Expense" : {
       "extractionState" : "manual",
@@ -226,7 +310,14 @@
       }
     },
     "Forgot Pin?" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esqueceu a Senha?"
+          }
+        }
+      }
     },
     "Graphs" : {
       "extractionState" : "manual",
@@ -263,7 +354,14 @@
       }
     },
     "Month" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mês"
+          }
+        }
+      }
     },
     "My Widget" : {
       "extractionState" : "manual",
@@ -283,7 +381,14 @@
       }
     },
     "Preview" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview"
+          }
+        }
+      }
     },
     "Recents" : {
       "extractionState" : "manual",
@@ -422,7 +527,14 @@
       }
     },
     "Tap to Unlock" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presione para Desbloquear"
+          }
+        }
+      }
     },
     "This is an example widget." : {
       "extractionState" : "manual",
@@ -442,7 +554,14 @@
       }
     },
     "Tim Apple" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tim Apple"
+          }
+        }
+      }
     },
     "Title" : {
       "extractionState" : "manual",
@@ -513,7 +632,14 @@
       }
     },
     "What's New in the\nExpenses Tracker" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O que a de novo no Expenses Tracker"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

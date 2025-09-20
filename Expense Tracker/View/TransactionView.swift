@@ -105,16 +105,19 @@ struct TransactionView: View {
             }
             .padding(15)
         }
-        .onTapGesture{
-            focusTitle = false
-            focusRemarks = false
-            focusAmount = false
-        }
         .navigationTitle("\(editTransaction == nil ? String(localized: "Add") : String(localized: "Edit")) \(String(localized: "Transaction"))")
         .background(.gray.opacity(0.15))
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Save", action: save)
+            }
+            
+            ToolbarItem(placement: .keyboard) {
+                Button("Done") {
+                    focusTitle = false
+                    focusRemarks = false
+                    focusAmount = false
+                }
             }
         })
         .onAppear(perform: {
@@ -122,7 +125,7 @@ struct TransactionView: View {
                 /// Load All Existing Data from the Transaction
                 title = editTransaction.title
                 remarks = editTransaction.remarks
-                dateAdded = editTransaction.dateAdded
+                dateAdded = Calendar.current.startOfDay(for: editTransaction.dateAdded)
                 if let category = editTransaction.rawCategory {
                     self.category = category
                 }
