@@ -29,7 +29,6 @@ struct CardView: View {
                 }
                 .padding(.bottom, 25)
                 
-                
                 HStack(spacing: 0) {
                     ForEach(Category.allCases, id: \.rawValue) { category in
                         let symbolImage = category == .income ? "arrow.down" : "arrow.up"

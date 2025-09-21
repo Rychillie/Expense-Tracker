@@ -16,7 +16,7 @@ struct LockView<Content: View>: View {
     var isEnabled: Bool
     var lockWhenAppGoesBackground: Bool = true
     @ViewBuilder var content: Content
-    var forgotPin: () -> () = {  }
+    var forgotPin: () -> Void = {  }
     /// View Properties
     @State private var pin: String = ""
     @State private var animateField: Bool = false
@@ -83,13 +83,13 @@ struct LockView<Content: View>: View {
                 .transition(.offset(y: size.height + 100))
             }
         }
-        .onChange(of: isEnabled, initial: true) { oldValue, newValue in
+        .onChange(of: isEnabled, initial: true) { _, newValue in
             if newValue {
                 unlockView()
             }
         }
         /// Locking When App Goes Background
-        .onChange(of: phase) { oldValue, newValue in
+        .onChange(of: phase) { _, newValue in
             if newValue != .active && lockWhenAppGoesBackground {
                 isUnlocked = false
                 pin = ""
@@ -245,12 +245,12 @@ struct LockView<Content: View>: View {
                 })
                 .frame(maxHeight: .infinity, alignment: .bottom)
             }
-            .onChange(of: pin) { oldValue, newValue in
+            .onChange(of: pin) { _, newValue in
                 /// Update 4 to 6: If you need a 6 digit Pin
                 if newValue.count == 4 {
                     /// Validate Pin
                     if lockPin == pin {
-                        //print("Unlocked")
+                        // print("Unlocked")
                         withAnimation(.snappy, completionCriteria: .logicallyComplete) {
                             isUnlocked = true
                         } completion: {
@@ -259,7 +259,7 @@ struct LockView<Content: View>: View {
                             noBiometricAccess = !isBiometricAvailable
                         }
                     } else {
-                        //print("Wrong Pin")
+                        // print("Wrong Pin")
                         pin = ""
                         animateField.toggle()
                     }

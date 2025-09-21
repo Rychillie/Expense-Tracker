@@ -15,7 +15,6 @@ extension Date {
         return calendar.date(from: components) ?? self
     }
     
-    
     var endtOfMonth: Date {
         let calendar = Calendar.current
         

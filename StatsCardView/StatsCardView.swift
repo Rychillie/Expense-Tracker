@@ -13,12 +13,12 @@ struct Provider: TimelineProvider {
         WidgetEntry(date: Date())
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (WidgetEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (WidgetEntry) -> Void) {
         let entry = WidgetEntry(date: Date())
         completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         var entries: [WidgetEntry] = []
         
         entries.append(.init(date: .now))
@@ -32,7 +32,7 @@ struct WidgetEntry: TimelineEntry {
     let date: Date
 }
 
-struct StatsCardViewEntryView : View {
+struct StatsCardViewEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {

@@ -162,7 +162,7 @@ struct Recents: View {
         .padding(.top, 5)
     }
     
-    func headerBGOpacity(_ proxy: GeometryProxy)-> CGFloat {
+    func headerBGOpacity(_ proxy: GeometryProxy) -> CGFloat {
         let minY = proxy.frame(in: .scrollView).minY + safeArea.top
         return minY > 0 ? 0 : (-minY / 15)
     }

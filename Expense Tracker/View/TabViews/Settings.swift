@@ -32,7 +32,7 @@ struct Settings: View {
 //                    }
 //                }
             }
-            .onTapGesture{
+            .onTapGesture {
                 focusUserName = false
             }
             .navigationTitle(LocalizedStringKey("Settings"))

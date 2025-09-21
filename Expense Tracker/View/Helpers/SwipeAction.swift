@@ -98,7 +98,7 @@ struct SwipeAction<Content: View>: View {
     
     /// Action Buttons
     @ViewBuilder
-    func ActionButtons(resetPosition: @escaping () -> ()) -> some View {
+    func ActionButtons(resetPosition: @escaping () -> Void) -> some View {
         /// Each Button will have 100 width
         Rectangle()
             .fill(.clear)
@@ -155,7 +155,7 @@ struct Action: Identifiable {
     var iconFont: Font = .title
     var iconTint: Color = .white
     var isEnabled: Bool = true
-    var action: () -> ()
+    var action: () -> Void
 }
 
 @resultBuilder

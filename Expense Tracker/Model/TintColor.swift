@@ -20,5 +20,5 @@ var tints: [TintColor] = [
     .init(color: "Pink", value: .pink),
     .init(color: "Purple", value: .purple),
     .init(color: "Brown", value: .brown),
-    .init(color: "Orange", value: .orange),
+    .init(color: "Orange", value: .orange)
 ]

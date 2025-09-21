@@ -12,7 +12,7 @@ struct Search: View {
     /// View Properties
     @State private var searchText: String = ""
     @State private var filterText: String = ""
-    @State private var selectedCategory: Category? = nil
+    @State private var selectedCategory: Category?
     let searchPublisher = PassthroughSubject<String, Never>()
     var body: some View {
         NavigationStack {
@@ -22,7 +22,7 @@ struct Search: View {
                         ForEach(transactions) { transaction in
                             NavigationLink {
                                 TransactionView(editTransaction: transaction)
-                            } label : {
+                            } label: {
                                 TransactionCardView(transaction: transaction, showsCategory: true)
                             }
                             .buttonStyle(.plain)
@@ -35,7 +35,7 @@ struct Search: View {
                 ContentUnavailableView(LocalizedStringKey("Search Transactions"), systemImage: "magnifyingglass")
                     .opacity(searchText.isEmpty ? 1: 0)
             })
-            .onChange(of: searchText, { oldValue, newValue in
+            .onChange(of: searchText, { _, newValue in
                 if newValue.isEmpty {
                     filterText = ""
                 }

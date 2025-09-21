@@ -271,6 +271,7 @@
 				893EBC2A2BEFFC1B00B0053A /* Frameworks */,
 				893EBC2B2BEFFC1B00B0053A /* Resources */,
 				896BAC812BFC25D900BB46EA /* Embed Foundation Extensions */,
+				89095E732E7F70440060EF37 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -358,6 +359,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89095E732E7F70440060EF37 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		893EBC292BEFFC1B00B0053A /* Sources */ = {
@@ -556,6 +579,7 @@
 				DEVELOPMENT_TEAM = 8YG678URN3;
 				DYLIB_CURRENT_VERSION = 5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Expense Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
@@ -592,6 +616,7 @@
 				DYLIB_CURRENT_VERSION = 5;
 				"DYLIB_CURRENT_VERSION[arch=*]" = 5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Expense Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
